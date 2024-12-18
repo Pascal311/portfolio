@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<?php
+
 require_once("yaml/yaml.php");
-?>
+
 
 <header>
     <h1>Mon Portfolio</h1>
