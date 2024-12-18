@@ -1,28 +1,37 @@
-<?php
-// Inclure l'autoload de Composer pour charger les dépendances (y compris Symfony YAML)
-require_once 'vendor/autoload.php'; // Si votre fichier composer.json est dans le dossier racine
-
-use Symfony\Component\Yaml\Yaml;
-
-// Charger les données du fichier YAML
-$data = Yaml::parseFile('data/data.yaml');
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= htmlspecialchars($data['accueil']['nom']) ?> - Portfolio</title>
+    <title>Portfolio Pascal Griffon</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php include 'includes/header.php'; ?>
+<?php
+require_once("yaml/yaml.php");
+?>
 
-    <main>
-        <?php include 'pages/accueil.php'; ?>
-    </main>
+<header>
+    <h1>Mon Portfolio</h1>
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#competences">Compétences</a>
+        <a href="#formation">Formation</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <?php include 'includes/footer.php'; ?>
+
+<?php include 'pages/accueil.php'; ?>
+<?php include 'pages/competences.php'; ?>
+<?php include 'pages/formation.php'; ?>
+<?php include 'pages/realisations.php'; ?>
+<?php include 'pages/contact.php'; ?>
+
+<footer>
+    <p>&copy; <?php echo date("Y"); ?> Mon Portfolio</p>
+</footer>
+
 </body>
 </html>

@@ -1,0 +1,13 @@
+titre: Formations
+etablissements: 
+  - nom: Lycée Alexis de Tocqueville et Charles Tellier
+    formation: Bac Pro SN option RISC
+    periode: 2021-2024
+    lieu: Cherbourg-en-Cotentin
+    contenu: Bases du réseaux et du développement
+  - nom: CaenSup St Ursule
+    formation: BTS SIO
+    periode: 2024-2026
+    lieu: Caen
+    contenu: Réseaux et développement
+    cv: "CV.pdf"

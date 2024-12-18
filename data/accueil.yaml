@@ -1,4 +1,6 @@
-titre: "Accueil"
-nom: "Pascal Griffon"
-accroche: "Développeur Web Créatif et Rigoureux"
-presentation: "Passionné par le développement web, je conçois des solutions innovantes et performantes."
+titre: Bienvenue sur le Portfolio de Pascal Griffon
+descriptions: 
+  - nom: 
+    contenu: Bonjour, je m'appelle Pascal Griffon, j'ai 18 ans et je suis en 1ère de BTS SIO à CaenSup St Ursule 
+  - nom: 
+    contenu: Je suis calme et sérieux. Je suis passionné par l'informatique en particulier pour le réseau. 

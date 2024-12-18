@@ -1,0 +1,8 @@
+titre: Contact
+formulaire:
+  - nom: expéditeur
+    mail:
+    objet:
+    contenu:
+    captcha:
+

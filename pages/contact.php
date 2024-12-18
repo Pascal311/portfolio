@@ -1,39 +1,36 @@
 <?php
-include '../includes/functions.php';
-$data = yaml_parse_file('../data/data.yaml');
+
+require_once($_SERVER['DOCUMENT_ROOT'] . "/portfolio/yaml/yaml.php");
+
+// Charger le fichier YAML avec le chemin absolu
+$data = yaml_parse_file($_SERVER['DOCUMENT_ROOT'] . "/portfolio/data/contact.yaml");
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Portfolio</title>
-    <link rel="stylesheet" href="../css/contact.css">
-</head>
-<body>
-    <?php include '../includes/header.php'; ?>
+?>
 
-    <main>
-        <section>
-            <h2>Contactez-moi</h2>
-            <form method="POST" action="../send_mail.php">
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="subject">Objet :</label>
-                <input type="text" id="subject" name="subject" required>
-                
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Envoyer</button>
-            </form>
-        </section>
-    </main>
+<section id='contact'>
 
-    <?php include '../includes/footer.php'; ?>
-</body>
-</html>
+<h1><?php echo $data['titre']; ?></h1>
+<?php
+foreach($data['formulaire'] AS $formulaire){
+    echo $formulaire['nom']." : <br>";
+    echo $formulaire['mail']." : <br>";
+    echo $formulaire['objet']." : <br>";
+    echo $formulaire['contenu']." : <br>";
+
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $to = "jean.dupont@example.com";
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    $headers = "From: " . $_POST['email'];
+
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Message envoyé avec succès.";
+    } else {
+        echo "Une erreur s'est produite.";
+    }
+}
+
+?>
+</section>

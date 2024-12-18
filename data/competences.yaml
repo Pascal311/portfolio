@@ -1,0 +1,35 @@
+titre: Mes Compétences
+domaines:
+  - nom: Réseaux
+    competences:
+      - nom: configuration switchs/routeurs
+        niveau: ★★★☆☆
+      - nom: cablâge prise RJ45/optique
+        niveau: ★★★☆☆
+      - nom: Linux (Ubuntu, Debian)
+        niveau: ★★★☆☆
+      - nom: Windows Server 2019
+        niveau: ★★★☆☆
+      - nom: Cisco Packet Tracer
+        niveau: ★★☆☆☆
+  - nom: Développement
+    competences:
+      - nom: HTML
+        niveau: ★★★★☆
+      - nom: CSS
+        niveau: ★★★☆☆
+      - nom: JavaScript
+        niveau: ★☆☆☆☆
+      - nom: PHP
+        niveau: ★☆☆☆☆
+      - nom: MYSQL
+        niveau: ★★★☆☆
+  - nom: Langues
+    competences :
+      - nom: Français (natif)
+        niveau: ★★★★★
+      - nom: Anglais 
+        niveau: ★★★☆☆
+      - nom: Espagnol
+        niveau: ★★☆☆☆
+

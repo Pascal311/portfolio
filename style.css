@@ -1,0 +1,183 @@
+/* Style de base */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff6f61, #2a2a72);
+    color: #fff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alignement au début de la page */
+    align-items: center;
+    min-height: 100vh; /* Assurez-vous que le body prend toute la hauteur de la fenêtre */
+    overflow: auto; /* Permet le défilement si nécessaire */
+}
+
+/* Conteneur principal - ajustements */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 3rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 1;
+    border-radius: 20px; /* Arrondir les coins du conteneur */
+    background-color: rgba(255, 255, 255, 0.1); /* Arrière-plan léger pour le conteneur */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Ombre autour du conteneur */
+    overflow: visible; /* Permet au contenu de ne pas être coupé */
+    width: 100%; /* Le conteneur prendra toute la largeur disponible */
+}
+
+/* Sections */
+section {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px; /* Arrondir les coins des sections */
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    height: auto; /* Laisser la section s'étendre en fonction du contenu */
+}
+
+/* En-tête */
+header {
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    transform: translateY(0);
+    transition: transform 0.4s ease-out;
+    border-radius: 20px; /* Arrondir les coins de l'en-tête */
+    margin-bottom: 3rem;
+}
+
+/* Animation de l'en-tête au survol */
+header:hover {
+    transform: translateY(-10px);
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Animation "glow" sur l'en-tête */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff6f61, 0 0 10px #ff6f61, 0 0 15px #ff6f61;
+    }
+    100% {
+        text-shadow: 0 0 20px #3498db, 0 0 30px #3498db, 0 0 40px #3498db;
+    }
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+    padding: 1.2rem 0;
+    border-radius: 50px;
+    margin-bottom: 3rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* Effet au survol des liens de navigation */
+nav a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+/* Effet interactif lors du survol des liens */
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #ff6f61;
+    transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+}
+
+nav a:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+nav a:hover {
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Titres des sections */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    border-bottom: 3px solid #ff6f61;
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 20px; /* Arrondir les coins du pied de page */
+}
+
+/* Styles responsives */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Affichage en une seule colonne sur mobile */
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    footer {
+        padding: 1.2rem;
+    }
+}
