@@ -1,0 +1,33 @@
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+h2 {
+    text-align: center;
+    color: #222;
+    padding: 20px 0;
+}
+
+.table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
