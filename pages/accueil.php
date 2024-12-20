@@ -12,8 +12,7 @@ if (!class_exists('Symfony\Component\Yaml\Yaml')) {
 }
 
 // Charger le fichier YAML avec le chemin absolu
-$data = yaml_parse_file($_SERVER['DOCUMENT_ROOT'] . "/portfolio/data/accueil.yaml");
-
+$data = yaml_parse_file(__DIR__ . '/../data/accueil.yaml');
 ?>
 
 <section id='accueil'>
