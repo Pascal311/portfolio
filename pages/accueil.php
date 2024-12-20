@@ -1,7 +1,7 @@
 <?php
 
 // Utiliser un chemin absolu pour inclure yaml.php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/portfolio/yaml/yaml.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/portfolio/vendor/symfony/yaml/Yaml.php");
 
 // Charger le fichier YAML avec le chemin absolu
 $data = yaml_parse_file($_SERVER['DOCUMENT_ROOT'] . "/portfolio/data/accueil.yaml");

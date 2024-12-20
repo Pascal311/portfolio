@@ -8,8 +8,9 @@
 </head>
 <body>
 
-require_once("yaml/yaml.php");
-
+<?php
+require_once($_SERVER['DOCUMENT_ROOT'] . "/portfolio/vendor/symfony/yaml/Yaml.php");
+?>
 
 <header>
     <h1>Mon Portfolio</h1>
